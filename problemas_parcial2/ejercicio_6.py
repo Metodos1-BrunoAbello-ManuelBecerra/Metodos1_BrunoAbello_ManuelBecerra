@@ -65,4 +65,4 @@ print("La aproximacion " + str(aprox))
 
 error = np.abs((aprox - Real)/Real)*100
 
-print("El error es "+str(error)+ " y como pueden ver es mucho menos que 5%")
+print("El error es "+str(error)+ "% y como pueden ver es mucho menos que 5%")
