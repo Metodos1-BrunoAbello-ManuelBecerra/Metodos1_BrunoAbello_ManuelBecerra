@@ -6,12 +6,7 @@ Created on Thu Sep 28 17:30:22 2023
 @author: manuelbecerra
 """
 
-from IPython.display import display, HTML
-display(HTML("<style>.container { width:100% !important; }</style>"))
 import numpy as np
-import matplotlib.pyplot as plt
-from scipy import integrate
-import sympy as sym
 
 
 
