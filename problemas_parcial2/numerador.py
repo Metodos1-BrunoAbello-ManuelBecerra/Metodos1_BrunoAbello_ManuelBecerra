@@ -21,9 +21,9 @@ v0 = c/lamda0
 v1 = c/lamda1
 
 
-a = (h*v0)/(k*T)
-b = (h*v1)/(k*T)
-f = lambda x: (x**3)/(np.exp(-x)-1)
+b = (h*v0)/(k*T)
+a = (h*v1)/(k*T)
+f = lambda x: (x**3)/(-np.exp(-x)+1)
 
 n = 20
 Roots, Weights = np.polynomial.legendre.leggauss(n)
