@@ -8,7 +8,6 @@ Created on Fri Sep 29 17:00:29 2023
 
 import numpy as np
 
-#numerador
 c=3*((10)**8)
 h = 6.626*((10)**-34)
 k = 1.3806*((10)**-23)
@@ -27,8 +26,7 @@ f = lambda x: (x**3)/(-np.exp(-x)+1)
 
 n = 20
 Roots, Weights = np.polynomial.legendre.leggauss(n)
-print(Roots,Weights)
-
-t = 0.5*( (b-a)*Roots + a + b ) #ese b-a es donde se define el intervalo
+t = 0.5*( (b-a)*Roots + a + b )
 Integral_numerador = 0.5*(b-a)*np.sum(Weights*f(t))
+
 print(Integral_numerador)

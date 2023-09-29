@@ -3,16 +3,19 @@ c=3*((10)**8)
 h = 6.626*((10)**-34)
 k = 1.3806*((10)**-23)
 T = 5772
-n = 20
 #Punto a
+n = 20
+
+#punto d
 lamda0 =  1*((10)**-7)
 lamda1 = 4*((10)**-7) #m
 
 v0 = c/lamda0
 v1 = c/lamda1
 
-a = (h*v0)/(k*T)
-b = (h*v1)/(k*T)
+
+a = (h*v0)/(k*T) #=6.236178009320121
+b = (h*v1)/(k*T) #=24.944712037280485
 f = lambda x: (x**3)/(-np.exp(-x)+1)
 
 Roots, Weights = np.polynomial.legendre.leggauss(n)
@@ -35,7 +38,9 @@ print (Iden)
 
 #Punto C
 f = Inum/Iden
-print (f)
+print("el denominador es "+str(Iden))
+print("el numerador es "+str(Inum))
+print ("el error es "+str(f))
 
 
 #Punto E
