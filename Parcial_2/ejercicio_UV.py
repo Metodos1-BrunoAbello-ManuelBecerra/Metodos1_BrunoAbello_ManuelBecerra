@@ -39,7 +39,7 @@ print (Iden)
 
 #Punto C
 f = Integral_numerador/Iden
-print (f)
+print ("el error es "+str(f*100)+" porciento")
 
 
 #Punto E
