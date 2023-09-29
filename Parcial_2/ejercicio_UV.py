@@ -10,7 +10,7 @@ lamda1 = 4*((10)**-7) #m
 v0 = c/lamda0
 v1 = c/lamda1
 
-
+#punto d
 b = (h*v0)/(k*T)
 a = (h*v1)/(k*T)
 
