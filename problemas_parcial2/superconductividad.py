@@ -5,8 +5,8 @@ Created on Thu Sep 28 17:30:22 2023
 
 @author: manuelbecerra
 """
-
 import numpy as np
+
 
 
 
