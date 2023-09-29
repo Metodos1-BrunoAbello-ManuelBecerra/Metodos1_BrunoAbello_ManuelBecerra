@@ -1,12 +1,9 @@
 import numpy as np
+
 c=3*((10)**8)
 h = 6.626*((10)**-34)
 k = 1.3806*((10)**-23)
 T = 5772
-#Punto a
-n = 20
-
-#punto d
 lamda0 =  1*((10)**-7)
 lamda1 = 4*((10)**-7) #m
 
@@ -14,15 +11,19 @@ v0 = c/lamda0
 v1 = c/lamda1
 
 
-a = (h*v0)/(k*T) #=6.236178009320121
-b = (h*v1)/(k*T) #=24.944712037280485
-f = lambda x: (x**3)/(-np.exp(-x)+1)
+b = (h*v0)/(k*T)
+a = (h*v1)/(k*T)
 
+def funcion(x):
+    f_x=(x**3)/(np.exp(x)-1)
+    return f_x
+
+n = 20
 Roots, Weights = np.polynomial.legendre.leggauss(n)
+t = 0.5*( (b-a)*Roots + a + b )
+Integral_numerador = 0.5*(b-a)*np.sum(Weights*funcion(t))
 
-t = 0.5*( (b-a)*Roots + a + b ) #ese b-a es donde se define el intervalo
-Inum = 0.5*(b-a)*np.sum(Weights*f(t))
-print(Inum)
+print(Integral_numerador)
 
 #Punto b
 
@@ -37,10 +38,8 @@ print (Iden)
 
 
 #Punto C
-f = Inum/Iden
-print("el denominador es "+str(Iden))
-print("el numerador es "+str(Inum))
-print ("el error es "+str(f))
+f = Integral_numerador/Iden
+print (f)
 
 
 #Punto E

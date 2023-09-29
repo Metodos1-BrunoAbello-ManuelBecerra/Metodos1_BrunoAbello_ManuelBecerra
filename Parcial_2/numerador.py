@@ -35,3 +35,6 @@ Integral_numerador = 0.5*(b-a)*np.sum(Weights*funcion(t))
 
 print(Integral_numerador)
 
+#ya se hizo
+
+
